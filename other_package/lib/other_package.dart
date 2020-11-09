@@ -52,3 +52,7 @@ class OtherPackage {
     return _di.get<GoogleSignIn>();
   }
 }
+
+class GetGoogleSignIn {
+  static GoogleSignIn get instance => GoogleSignIn();
+}
