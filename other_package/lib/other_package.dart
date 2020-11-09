@@ -2,6 +2,7 @@ library other_package;
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get_it/get_it.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:other_package/dependency_injection.dart' as di;
 import 'package:other_package/domain/usecases/get_currently_logged_user.dart';
 import 'package:other_package/domain/usecases/send_phone_verification_code.dart';
@@ -45,5 +46,9 @@ class OtherPackage {
 
   SignOut signOut() {
     return _di.get<SignOut>();
+  }
+
+  GoogleSignIn googleSignInInstance() {
+    return _di.get<GoogleSignIn>();
   }
 }
